@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🔭 I’m currently working on Clean Serverless Systems
+- 🔭 I’m currently working on Hexagonal Serverless Systems
 - 🌱 I’m currently learning AWS CDK
 - 👯 I’m looking to collaborate on Building Scalable MVPs
 - 🤔 I’m looking for help with Remote Opportunities in the US
