@@ -8,3 +8,5 @@
 - 💬 Ask me about Software Architecture, Serverless & Event Driven Architectures
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
+
+![AWS Event Driven Computing](https://miro.medium.com/max/1620/1*JxDFqhb95iPclzr2FJcQAQ.png)
