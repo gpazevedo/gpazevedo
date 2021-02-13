@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 - 🔭 I’m currently working on Hexagonal Serverless Systems
-- 🌱 I’m currently learning AWS CDK and Elixir
+- 🌱 I’m currently learning AWS CDK and Rust
 - 👯 I’m looking to collaborate on Building Scalable MVPs
 - 🤔 I’m looking for help with Remote Opportunities in the US
 - :rocket: I'm studying to get AWS Certifications
