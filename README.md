@@ -9,4 +9,6 @@
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
-![CQRS Hexagonal](./accounts.png)
+![CQRS Hexagonal](./Accounts_API.png)
+
+![ETL Hexagonal](./CoffeeShp_Architecture.png)
