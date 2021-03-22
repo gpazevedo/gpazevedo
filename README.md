@@ -12,5 +12,5 @@
 ![CQRS Hexagonal](./Accounts_API.png)
 Bank Account API
 
-![ETL Hexagonal](./CoffeeShp_Architecture.png)
+![ETL Hexagonal](./CoffeeShop_Architecture.png)
 Shop Accounting
