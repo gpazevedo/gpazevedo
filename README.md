@@ -10,5 +10,7 @@
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
 ![CQRS Hexagonal](./Accounts_API.png)
+Bank Account API
 
 ![ETL Hexagonal](./CoffeeShp_Architecture.png)
+Shop Accounting
