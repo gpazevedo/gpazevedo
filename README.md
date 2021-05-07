@@ -12,5 +12,8 @@
 ![Event Modelling](./blueprint.jpg)
 *Hotel Event Modelling*
 
+![CQRS](https://github.com/gpazevedo/account_api/blob/main/docs/Accounts_API.png)
+*Syncronous Bank API*
+
 ![ETL Hexagonal](./CoffeeShop_Architecture.png) <br>
 *Shop Accounting*
