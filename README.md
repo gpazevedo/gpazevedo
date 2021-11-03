@@ -1,9 +1,9 @@
 ### Hi there 👋
 
 - 🔭 I’m currently working on Microservices, DDD Designed, TypeScript Developed, K8s Served
-- 🌱 I’m currently learning AWS CDK and Rust
+- 🌱 I’m currently learning Kotlin
 - 👯 I’m looking to collaborate on Building Scalable MVPs
-- 🤔 I’m looking for help with Remote Opportunities in the US, Europe, or Brazil
+- 🤔 I’m looking for help with Improving Microservices Developer Experience
 - 🚀 I'm experimenting Event Modelling and AsyncAPI
 - 💬 Ask me about Software Architecture, Serverless & Event Driven Architectures
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
