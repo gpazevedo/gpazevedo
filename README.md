@@ -1,11 +1,11 @@
 ### Hi there 👋
 
-- 🔭 I’m currently working on Microservices, DDD Designed, TypeScript Developed, K8s Served
-- 🌱 I’m currently learning Kotlin & Quarkus
+- 🔭 I’m currently working on Reactive Microservices, Quarkus & Kotlin Developed, Kafka & K8s Served at AWS
+- 🌱 I’m currently learning Spark & Airflow
 - 👯 I’m looking to collaborate on Building Scalable MVPs
 - 🤔 I’m looking for help with Improving Microservices Developer Experience
 - 🚀 I'm experimenting Event Modelling and AsyncAPI
-- 💬 Ask me about Software Architecture, Serverless & Event Driven Architectures
+- 💬 Ask me about Software Architecture, Serverless, DDD, Data Mesh & Event Driven Architectures
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
