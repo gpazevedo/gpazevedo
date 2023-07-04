@@ -9,6 +9,9 @@
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
+![Kafka DLQ on Apache Beam](./DLQ_Tratamento_Erros.png)
+*Kafka Dead Letter Queue on Apache Beam*
+
 ![Event Modelling](./blueprint.jpg)
 *Hotel Event Modelling*
 
