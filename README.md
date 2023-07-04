@@ -2,7 +2,7 @@
 
 - 🔭 I'm currently Improving Dev Experience on Data Mesh & Real Time Analytics based on GCP, Kafka & Apache Beam
 - 🌱 I’ve worked on Reactive Microservices, Quarkus & Kotlin Developed, Kafka & K8s Served at AWS
-- 👯 I’m looking to collaborate on Building a Data Mesh Platform
+- 👯 I’m looking to collaborate on Apache Beam & Kafka Development
 - 🤔 I’m looking for help with Improving Microservices Developer Experience
 - 🚀 I'm experimenting Event Modelling and AsyncAPI
 - 💬 Ask me about Software Architecture, Serverless, DDD, Data Mesh & Event Driven Architectures
