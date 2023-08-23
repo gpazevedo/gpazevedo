@@ -9,6 +9,9 @@
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
+![Side Kafka](./Side-Kafka-Kabanize.png)
+*Converts JSON payload to Avro payload based on schemaId and publishes it to a Kafka topic*
+
 ![Kafka DLQ on Apache Beam](./Beam_Kafka_DLQ.png)
 *Kafka Dead Letter Queue on Apache Beam*
 
