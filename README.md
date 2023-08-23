@@ -1,7 +1,8 @@
 ### Hi there 👋
 
-- 🔭 I'm currently Improving Developer Experience on Data Mesh & Real Time Analytics based on GCP, Kafka & Apache Beam
+- 🔭 I'm currently Improving Developer Experience in Data Mesh & Real Time Analytics based on GCP, Kafka & Apache Beam
 - 🌱 I’ve worked on Reactive Microservices, Quarkus & Kotlin Developed, Kafka & K8s Served at AWS
+- 💻 Trying Flink
 - 👯 I’m looking to collaborate on Apache Beam & Kafka Open Source Projects
 - 🤔 I’m looking for Disruptive Streaming Analytics Use Cases
 - 🚀 I'm experimenting with Event Modelling and AsyncAPI
@@ -11,7 +12,7 @@
 
 ![Side Kafka](./Side-Kafka-Kabanize.png)
 
-*Converts JSON payload to Avro payload based on schemaId and publishes it to a Kafka topic*
+*Sidecar that converts a JSON payload to Avro payload based on a schemaId and publishes it to a Kafka topic*
 
 ![Kafka DLQ on Apache Beam](./Beam_Kafka_DLQ.png)
 *Kafka Dead Letter Queue on Apache Beam*
