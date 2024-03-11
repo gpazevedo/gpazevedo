@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-- 🔭 I'm currently Improving Developer Experience in Real Time Analytics based on GCP, CDC, Flink, Kafka & Apache Beam
+- 🔭 I'm currently Improving Developer Experience in Event-Driven Systems & Real Time Analytics based on GCP, CDC, Flink, Kafka & Apache Beam
 - 🌱 I’ve worked on Reactive Microservices, Quarkus & Kotlin Developed, Kafka & K8s Served at AWS
-- 💻 Trying Reactive Kotlin & Spring Boot
+- 💻 Playing with Reactive Kotlin & Spring Boot
 - 👯 I’m looking to collaborate on Apache Beam & Kafka Open Source Projects
 - 🤔 I’m looking for Disruptive Streaming Analytics Use Cases
 - 🚀 I'm experimenting with Event Modelling and AsyncAPI
@@ -10,7 +10,11 @@
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
-![Side Kafka](./Side-Kafka-Kabanize.png)
+![Kafka Ingestor](./Kafka_Service.png)
+
+*Service that converts a JSON payload to Avro payload based on a schemaId and publishes it to a Kafka topic, using Outbox Pattern*
+
+![Side Kafka](./Side-Kafka-EN.png)
 
 *Sidecar that converts a JSON payload to Avro payload based on a schemaId and publishes it to a Kafka topic*
 
