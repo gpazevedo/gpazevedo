@@ -12,11 +12,11 @@
 
 ![Kafka Ingestor](./Kafka_Service.png)
 
-*Service that converts a JSON payload to Avro payload based on a schemaId and publishes it to a Kafka topic, using Outbox Pattern*
+*Contract-based production of Avro events from a JSON payload to a Kafka Topic. Service converts a JSON payload to Avro payload based on a verified schema and publishes it to a Kafka topic, using Outbox Pattern*
 
 ![Side Kafka](./Side-Kafka-EN.png)
 
-*Sidecar that converts a JSON payload to Avro payload based on a schemaId and publishes it to a Kafka topic*
+*Sidecar that converts a JSON payload to Avro payload based on a verified schema and publishes it to a Kafka topic*
 
 ![Kafka DLQ on Apache Beam](./Beam_Kafka_DLQ.png)
 *Kafka Dead Letter Queue on Apache Beam*
