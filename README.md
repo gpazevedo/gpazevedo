@@ -2,7 +2,7 @@
 
 - 🔭 I'm currently Improving Developer Experience in Event-Driven Systems & Real Time Analytics based on GCP, CDC, Flink, Kafka & Apache Beam
 - 🌱 I’ve worked on Reactive Microservices, Quarkus & Kotlin Developed, Kafka & K8s Served at AWS
-- 💻 Playing with Helidon, Kotlin & Spring Boot, Redoc, K6
+- 💻 Playing with Helidon 4, Kotlin & Spring Boot, Redoc, K6
 - 👯 I’m looking to collaborate on Apache Beam & Kafka Open Source Projects
 - 🤔 I’m looking for Disruptive Streaming Analytics Use Cases
 - 🚀 I'm experimenting with Event Modelling and AsyncAPI
