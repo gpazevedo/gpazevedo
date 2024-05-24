@@ -21,6 +21,9 @@
 ![Kafka DLQ on Apache Beam](./Beam_Kafka_DLQ.png)
 *Kafka Dead Letter Queue on Apache Beam*
 
+![Goals Service](./Goals_Service.jpg)
+*Goals Service*
+
 ![Event Modelling](./blueprint.jpg)
 *Hotel Event Modelling*
 
