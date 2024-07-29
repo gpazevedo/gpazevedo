@@ -5,7 +5,7 @@
 - 💻 Playing with Helidon 4, Kotlin & Spring Boot, Redoc, K6
 - 👯 I’m looking to collaborate on Apache Beam & Kafka Open Source Projects
 - 🤔 I’m looking for Disruptive Streaming Analytics Use Cases
-- 🚀 I'm experimenting Ruby on Rails 7
+- 🚀 I'm learning BlockChain
 - 💬 Ask me about Software Architecture, Serverless, DDD, Data Mesh, CDC & Event-Driven Architecture
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
