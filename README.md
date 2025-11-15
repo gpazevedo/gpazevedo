@@ -1,12 +1,12 @@
 ### Hi there 👋
 
-- 🔭 I'm currently Building Tools to Reduce Observability Costs
-- 🌱 I’ve worked to Improve Developer Experience in Event-Driven Systems & Real Time Analytics based on GCP, CDC, Flink, Kafka & Apache Beam
-- 💻 Playing with Helidon 4, Kotlin & Spring Boot, Redoc, Gatling
-- 👯 I’m looking to collaborate on Flink, Apache Beam & Kafka Open Source Projects
-- 🤔 I’m looking for Disruptive Streaming Analytics Use Cases
-- 🚀 I'm learning Open Telemetry
-- 💬 Ask me about Software Architecture, Observability, DDD, Data Mesh, CDC & Event-Driven Architecture
+- 🔭 I'm currently Building AI/ML Infrastructure & Platforms
+- 🌱 I’ve worked to Improve Developer Experience in ML, Agentic Systems and Event-Driven Systems
+- 💻 Playing with Strands, LangGraph, MCP, KubeFlow, MLFlow.
+- 👯 I’m looking to collaborate on AI Open Source Projects
+- 🤔 I’m looking for Disruptive AI/ML Use Cases
+- 🚀 I'm learning BedRock AgentCore
+- 💬 Ask me about AI, Software Architecture, Observability, DDD, Data Mesh, CDC & Event-Driven Architecture
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
