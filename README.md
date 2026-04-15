@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 - 🔭 I'm currently Building AI/ML Infrastructure & Platforms
-- 🌱 I’ve worked to Improve Developer Experience in ML, Agentic Systems and Event-Driven Systems
+- 🌱 I’ve worked to Improve Developer Experience in Generative AI, Agentic Systems, and Event-Driven Systems
 - 💻 Playing with Strands, LangGraph, MCP, KubeFlow, MLFlow.
 - 👯 I’m looking to collaborate on AI Open Source Projects
 - 🤔 I’m looking for Disruptive AI/ML Use Cases
@@ -10,9 +10,11 @@
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
+![AI Teleprompter](./teleprompter.svg)
+
 ![Kafka Ingestor](./Kafka_Service.png)
 
-*Contract-based production of Avro events from a JSON payload to a Kafka Topic. Service converts a JSON payload to Avro payload based on a verified schema and publishes it to a Kafka topic, using Outbox Pattern*
+*Contract-based production of Avro events from a JSON payload to a Kafka Topic. Service converts a JSON payload to an Avro payload based on a verified schema and publishes it to a Kafka topic, using the Outbox Pattern*
 
 ![Side Kafka](./Side-Kafka-EN.png)
 
