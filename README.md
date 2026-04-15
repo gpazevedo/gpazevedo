@@ -10,7 +10,9 @@
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
-![AI Teleprompter](./teleprompter.svg)
+![Spring AI App deployed at AWS AgentCore](./infrastructure.svg)
+
+![AI Teleprompter](./architecture.svg)
 
 ![Kafka Ingestor](./Kafka_Service.png)
 
