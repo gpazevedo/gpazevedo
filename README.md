@@ -12,7 +12,11 @@
 
 ![Spring AI App deployed at AWS AgentCore](./infrastructure.svg)
 
+* Basic Generative AI app, built with Spring Boot 4, Spring AI 2 with full Observability, deployed at AWS Bedrock AgentCore *
+
 ![AI Teleprompter](./architecture.svg)
+
+* Browser-based AI Teleprompter for public speakers *
 
 ![Kafka Ingestor](./Kafka_Service.png)
 
