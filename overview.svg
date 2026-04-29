@@ -1,0 +1,342 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 850" width="1250" height="850" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1d2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aws-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1a0d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="app-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d0d1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="obs-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1225;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d0a18;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="node-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f" />
+      <stop offset="100%" style="stop-color:#0d2040" />
+    </linearGradient>
+    <linearGradient id="node-green" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3d2b" />
+      <stop offset="100%" style="stop-color:#0d2016" />
+    </linearGradient>
+    <linearGradient id="node-purple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1a4d" />
+      <stop offset="100%" style="stop-color:#1a0d2e" />
+    </linearGradient>
+    <linearGradient id="node-orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d2810" />
+      <stop offset="100%" style="stop-color:#201508" />
+    </linearGradient>
+    <linearGradient id="node-mem" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e0d3a" />
+      <stop offset="100%" style="stop-color:#130825" />
+    </linearGradient>
+
+    <!-- Arrow markers -->
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4a9eff" />
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4ade80" />
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fb923c" />
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#c084fc" />
+    </marker>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8" />
+    </marker>
+
+    <!-- Glow / shadow -->
+    <filter id="drop-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Animated flow -->
+    <style>
+      .flow-1 { stroke-dasharray: 8 4; animation: dash 2s linear infinite; }
+      .flow-2 { stroke-dasharray: 8 4; animation: dash 2.5s linear infinite; }
+      .flow-3 { stroke-dasharray: 8 4; animation: dash 3s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -24; } }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1250" height="850" fill="url(#bg-grad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="625" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#e2e8f0" letter-spacing="1">Spring GenAI — AWS Bedrock AgentCore Architecture</text>
+  <text x="625" y="55" text-anchor="middle" font-size="11" fill="#64748b">Spring Boot · Spring AI · AWS Bedrock Nova Lite · OpenTelemetry · AgentCore Memory (Events API)</text>
+  <line x1="20" y1="65" x2="1230" y2="65" stroke="#334155" stroke-width="1"/>
+
+  <!-- ═══ CLIENT ═══ -->
+  <rect x="20" y="78" width="155" height="138" rx="10" fill="url(#node-blue)" stroke="#4a9eff" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="97" y="98" text-anchor="middle" font-size="11" font-weight="600" fill="#93c5fd">CLIENT</text>
+  <circle cx="97" cy="120" r="13" fill="#1e40af" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="97" y="125" text-anchor="middle" font-size="14">👤</text>
+  <text x="97" y="148" text-anchor="middle" font-size="9" fill="#cbd5e1">HTTP + JWT Bearer</text>
+  <text x="97" y="162" text-anchor="middle" font-size="9" fill="#94a3b8">POST /invocations</text>
+  <text x="97" y="175" text-anchor="middle" font-size="9" fill="#94a3b8">GET /ping</text>
+  <text x="97" y="189" text-anchor="middle" font-size="8" fill="#64748b">X-Amzn-…-Session-Id</text>
+
+  <!-- ═══ COGNITO (client side) ═══ -->
+  <rect x="20" y="238" width="155" height="82" rx="10" fill="url(#node-orange)" stroke="#fb923c" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="97" y="258" text-anchor="middle" font-size="11" font-weight="600" fill="#fdba74">AWS Cognito</text>
+  <text x="97" y="275" text-anchor="middle" font-size="17">🔐</text>
+  <text x="97" y="295" text-anchor="middle" font-size="9" fill="#cbd5e1">OAuth 2.0 / JWT</text>
+  <text x="97" y="308" text-anchor="middle" font-size="9" fill="#64748b">Token validation</text>
+
+  <!-- ═══ AGENTCORE RUNTIME BOUNDARY ═══ -->
+  <rect x="195" y="78" width="615" height="395" rx="14" fill="url(#aws-grad)" stroke="#22c55e" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="502" y="97" text-anchor="middle" font-size="11" font-weight="600" fill="#4ade80">AWS Bedrock AgentCore Runtime (isolated microVM)</text>
+
+  <!-- Spring Boot App box -->
+  <rect x="210" y="105" width="585" height="355" rx="10" fill="url(#app-grad)" stroke="#6366f1" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="502" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#a5b4fc">Spring Boot Application (Port 8080)</text>
+
+  <!-- PingController -->
+  <rect x="225" y="135" width="163" height="55" rx="8" fill="url(#node-blue)" stroke="#4a9eff" stroke-width="1.2"/>
+  <text x="306" y="155" text-anchor="middle" font-size="10" font-weight="600" fill="#93c5fd">PingController</text>
+  <text x="306" y="170" text-anchor="middle" font-size="9" fill="#94a3b8">GET /ping</text>
+  <text x="306" y="183" text-anchor="middle" font-size="9" fill="#64748b">→ HealthEndpoint</text>
+
+  <!-- InvocationsController -->
+  <rect x="225" y="205" width="163" height="118" rx="8" fill="url(#node-blue)" stroke="#4a9eff" stroke-width="1.2"/>
+  <text x="306" y="224" text-anchor="middle" font-size="10" font-weight="600" fill="#93c5fd">InvocationsController</text>
+  <text x="306" y="239" text-anchor="middle" font-size="9" fill="#94a3b8">POST /invocations</text>
+  <text x="306" y="253" text-anchor="middle" font-size="9" fill="#64748b">SSE Streaming (Flux)</text>
+  <text x="306" y="266" text-anchor="middle" font-size="9" fill="#64748b">JWT → userId</text>
+  <text x="306" y="279" text-anchor="middle" font-size="9" fill="#64748b">AgentCore Session-Id header</text>
+  <text x="306" y="292" text-anchor="middle" font-size="9" fill="#64748b">conversationId = userId:sessionId</text>
+  <text x="306" y="305" text-anchor="middle" font-size="9" fill="#64748b">Virtual Threads</text>
+
+  <!-- JwtUtil -->
+  <rect x="225" y="338" width="163" height="48" rx="8" fill="url(#node-purple)" stroke="#c084fc" stroke-width="1.2"/>
+  <text x="306" y="358" text-anchor="middle" font-size="10" font-weight="600" fill="#e9d5ff">JwtUtil</text>
+  <text x="306" y="374" text-anchor="middle" font-size="9" fill="#94a3b8">JWT Parse · userId extract</text>
+
+  <!-- Spring AI ChatClient -->
+  <rect x="403" y="135" width="375" height="75" rx="8" fill="url(#node-green)" stroke="#4ade80" stroke-width="1.2"/>
+  <text x="590" y="156" text-anchor="middle" font-size="10" font-weight="600" fill="#86efac">Spring AI ChatClient</text>
+  <text x="590" y="171" text-anchor="middle" font-size="9" fill="#94a3b8">BedrockConverseClient · MessageChatMemoryAdvisor</text>
+  <text x="590" y="185" text-anchor="middle" font-size="9" fill="#64748b">Model: nova-lite-v1 · Temp: 0.7 · MaxTokens: 1024</text>
+  <text x="590" y="199" text-anchor="middle" font-size="9" fill="#64748b">System: "You are a helpful assistant."</text>
+
+  <!-- Memory chain sub-panel -->
+  <rect x="403" y="223" width="195" height="112" rx="7" fill="url(#node-mem)" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="500" y="237" text-anchor="middle" font-size="9" font-weight="600" fill="#9f7aea">Spring AI Memory Chain</text>
+
+  <!-- MessageWindowChatMemory -->
+  <rect x="410" y="244" width="181" height="38" rx="6" fill="url(#node-purple)" stroke="#c084fc" stroke-width="1.2"/>
+  <text x="500" y="259" text-anchor="middle" font-size="9" font-weight="600" fill="#e9d5ff">MessageWindowChatMemory</text>
+  <text x="500" y="274" text-anchor="middle" font-size="8" fill="#94a3b8">Spring AI · wraps repository below</text>
+
+  <!-- AgentCoreChatMemoryRepository -->
+  <rect x="410" y="291" width="181" height="40" rx="6" fill="url(#node-purple)" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="500" y="307" text-anchor="middle" font-size="9" font-weight="600" fill="#d8b4fe">AgentCoreChatMemoryRepository</text>
+  <text x="500" y="321" text-anchor="middle" font-size="8" fill="#94a3b8">ChatMemoryRepository impl</text>
+  <text x="500" y="331" text-anchor="middle" font-size="7.5" fill="#64748b">Active when AGENTCORE_MEMORY_ID set</text>
+
+  <!-- ADOT Agent -->
+  <rect x="610" y="223" width="165" height="95" rx="8" fill="url(#node-orange)" stroke="#fb923c" stroke-width="1.2"/>
+  <text x="692" y="242" text-anchor="middle" font-size="10" font-weight="600" fill="#fdba74">ADOT Java Agent</text>
+  <text x="692" y="257" text-anchor="middle" font-size="9" fill="#94a3b8">v2.23.0 · ARM64</text>
+  <text x="692" y="271" text-anchor="middle" font-size="9" fill="#64748b">Auto-instrumentation</text>
+  <text x="692" y="284" text-anchor="middle" font-size="9" fill="#64748b">OTLP → X-Ray endpoint</text>
+  <text x="692" y="297" text-anchor="middle" font-size="9" fill="#64748b">+ CloudWatch Logs ns</text>
+  <text x="692" y="310" text-anchor="middle" font-size="9" fill="#64748b">100% sampling (prod)</text>
+
+  <!-- Observability Stack -->
+  <rect x="403" y="343" width="372" height="108" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+  <text x="589" y="362" text-anchor="middle" font-size="10" font-weight="600" fill="#94a3b8">Observability Stack</text>
+  <text x="589" y="378" text-anchor="middle" font-size="9" fill="#64748b">OpenTelemetry Logback Appender · Spring Actuator (Traces · Metrics)</text>
+  <text x="589" y="392" text-anchor="middle" font-size="9" fill="#64748b">Tracing: 100% prod via ADOT / 5% dev (management.tracing.sampling.probability)</text>
+  <text x="589" y="406" text-anchor="middle" font-size="9" fill="#64748b">OTLP metrics export disabled by default (ADOT owns prod export)</text>
+  <text x="589" y="420" text-anchor="middle" font-size="9" fill="#64748b">Profiles: local · production</text>
+  <text x="589" y="434" text-anchor="middle" font-size="9" fill="#475569">Local: OTel Collector :4317/:4318 → Jaeger · Prometheus · Loki</text>
+
+  <!-- ═══ AWS CLOUD SERVICES ═══ -->
+  <rect x="832" y="78" width="398" height="395" rx="14" fill="url(#aws-grad)" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="1031" y="97" text-anchor="middle" font-size="11" font-weight="600" fill="#fbbf24">AWS Cloud Services</text>
+
+  <!-- Bedrock -->
+  <rect x="850" y="113" width="362" height="75" rx="8" fill="url(#node-green)" stroke="#4ade80" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="1031" y="135" text-anchor="middle" font-size="11" font-weight="600" fill="#86efac">AWS Bedrock</text>
+  <text x="1031" y="152" text-anchor="middle" font-size="18">🤖</text>
+  <text x="1031" y="175" text-anchor="middle" font-size="9" fill="#94a3b8">us.amazon.nova-lite-v1:0 · Converse API</text>
+
+  <!-- AgentCore Memory -->
+  <rect x="850" y="203" width="175" height="100" rx="8" fill="url(#node-purple)" stroke="#c084fc" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="937" y="224" text-anchor="middle" font-size="10" font-weight="600" fill="#e9d5ff">AgentCore Memory</text>
+  <text x="937" y="241" text-anchor="middle" font-size="17">🧠</text>
+  <text x="937" y="261" text-anchor="middle" font-size="9" fill="#94a3b8">Events API</text>
+  <text x="937" y="274" text-anchor="middle" font-size="8" fill="#64748b">listEvents · createEvent</text>
+  <text x="937" y="285" text-anchor="middle" font-size="8" fill="#64748b">deleteEvent · 30-day TTL</text>
+  <text x="937" y="296" text-anchor="middle" font-size="8" fill="#64748b">keyed by actorId:sessionId</text>
+
+  <!-- ECR -->
+  <rect x="1037" y="203" width="175" height="100" rx="8" fill="url(#node-orange)" stroke="#fb923c" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="1124" y="224" text-anchor="middle" font-size="10" font-weight="600" fill="#fdba74">Amazon ECR</text>
+  <text x="1124" y="241" text-anchor="middle" font-size="17">📦</text>
+  <text x="1124" y="261" text-anchor="middle" font-size="9" fill="#94a3b8">Container Registry</text>
+  <text x="1124" y="274" text-anchor="middle" font-size="9" fill="#64748b">ARM64 image</text>
+  <text x="1124" y="287" text-anchor="middle" font-size="9" fill="#64748b">AgentCore pulls on deploy</text>
+
+  <!-- IAM -->
+  <rect x="850" y="317" width="175" height="80" rx="8" fill="url(#node-blue)" stroke="#4a9eff" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="937" y="337" text-anchor="middle" font-size="10" font-weight="600" fill="#93c5fd">AWS IAM</text>
+  <text x="937" y="354" text-anchor="middle" font-size="17">🛡️</text>
+  <text x="937" y="374" text-anchor="middle" font-size="9" fill="#94a3b8">Execution Role</text>
+  <text x="937" y="387" text-anchor="middle" font-size="9" fill="#64748b">Bedrock · ECR · CloudWatch</text>
+
+  <!-- Cognito AWS -->
+  <rect x="1037" y="317" width="175" height="80" rx="8" fill="url(#node-orange)" stroke="#fb923c" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="1124" y="337" text-anchor="middle" font-size="10" font-weight="600" fill="#fdba74">AWS Cognito</text>
+  <text x="1124" y="354" text-anchor="middle" font-size="17">🔐</text>
+  <text x="1124" y="374" text-anchor="middle" font-size="9" fill="#94a3b8">User Pool</text>
+  <text x="1124" y="387" text-anchor="middle" font-size="9" fill="#64748b">OAuth 2.0 · JWT tokens</text>
+
+  <!-- ═══ OBSERVABILITY ZONE ═══ -->
+  <rect x="20" y="492" width="1210" height="195" rx="14" fill="url(#obs-grad)" stroke="#a855f7" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="625" y="512" text-anchor="middle" font-size="11" font-weight="600" fill="#c084fc">Observability — AWS (Production) + Local Dev Stack</text>
+
+  <!-- X-Ray -->
+  <rect x="38" y="523" width="175" height="150" rx="8" fill="url(#node-orange)" stroke="#fb923c" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="125" y="542" text-anchor="middle" font-size="10" font-weight="600" fill="#fdba74">AWS X-Ray</text>
+  <text x="125" y="558" text-anchor="middle" font-size="17">🔭</text>
+  <text x="125" y="578" text-anchor="middle" font-size="9" fill="#94a3b8">Distributed Tracing</text>
+  <text x="125" y="592" text-anchor="middle" font-size="9" fill="#64748b">OTLP → xray endpoint</text>
+  <text x="125" y="606" text-anchor="middle" font-size="9" fill="#64748b">100% sampling (ADOT)</text>
+  <text x="125" y="620" text-anchor="middle" font-size="9" fill="#64748b">Anomaly detection</text>
+  <text x="125" y="634" text-anchor="middle" font-size="9" fill="#64748b">Service map</text>
+
+  <!-- CloudWatch -->
+  <rect x="223" y="523" width="175" height="150" rx="8" fill="url(#node-blue)" stroke="#4a9eff" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <text x="310" y="542" text-anchor="middle" font-size="10" font-weight="600" fill="#93c5fd">CloudWatch Logs</text>
+  <text x="310" y="558" text-anchor="middle" font-size="17">📋</text>
+  <text x="310" y="578" text-anchor="middle" font-size="9" fill="#94a3b8">Structured Logs</text>
+  <text x="310" y="592" text-anchor="middle" font-size="9" fill="#64748b">OTLP Logback appender</text>
+  <text x="310" y="606" text-anchor="middle" font-size="9" fill="#64748b">Log delivery streams</text>
+  <text x="310" y="620" text-anchor="middle" font-size="9" fill="#64748b">bedrock-agentcore ns</text>
+  <text x="310" y="634" text-anchor="middle" font-size="9" fill="#64748b">Metrics: disabled by default</text>
+
+  <!-- Jaeger -->
+  <rect x="408" y="523" width="155" height="150" rx="8" fill="#1a1a1a" stroke="#64748b" stroke-width="1.2"/>
+  <text x="485" y="542" text-anchor="middle" font-size="10" font-weight="600" fill="#94a3b8">Jaeger [local]</text>
+  <text x="485" y="558" text-anchor="middle" font-size="17">🔍</text>
+  <text x="485" y="578" text-anchor="middle" font-size="9" fill="#64748b">Trace visualization</text>
+  <text x="485" y="592" text-anchor="middle" font-size="9" fill="#475569">Port 16686</text>
+  <text x="485" y="620" text-anchor="middle" font-size="9" fill="#475569">docker-compose</text>
+
+  <!-- Prometheus -->
+  <rect x="573" y="523" width="155" height="150" rx="8" fill="#1a1a1a" stroke="#64748b" stroke-width="1.2"/>
+  <text x="650" y="542" text-anchor="middle" font-size="10" font-weight="600" fill="#94a3b8">Prometheus [local]</text>
+  <text x="650" y="558" text-anchor="middle" font-size="17">📊</text>
+  <text x="650" y="578" text-anchor="middle" font-size="9" fill="#64748b">Metrics collection</text>
+  <text x="650" y="592" text-anchor="middle" font-size="9" fill="#475569">Port 9090</text>
+  <text x="650" y="620" text-anchor="middle" font-size="9" fill="#475569">docker-compose</text>
+
+  <!-- Loki -->
+  <rect x="738" y="523" width="155" height="150" rx="8" fill="#1a1a1a" stroke="#64748b" stroke-width="1.2"/>
+  <text x="815" y="542" text-anchor="middle" font-size="10" font-weight="600" fill="#94a3b8">Loki [local]</text>
+  <text x="815" y="558" text-anchor="middle" font-size="17">📝</text>
+  <text x="815" y="578" text-anchor="middle" font-size="9" fill="#64748b">Log aggregation</text>
+  <text x="815" y="592" text-anchor="middle" font-size="9" fill="#475569">Port 3100</text>
+  <text x="815" y="620" text-anchor="middle" font-size="9" fill="#475569">docker-compose</text>
+
+  <!-- Grafana -->
+  <rect x="903" y="523" width="305" height="150" rx="8" fill="#1a1a1a" stroke="#64748b" stroke-width="1.2"/>
+  <text x="1055" y="542" text-anchor="middle" font-size="10" font-weight="600" fill="#94a3b8">Grafana [local]</text>
+  <text x="1055" y="558" text-anchor="middle" font-size="17">📈</text>
+  <text x="1055" y="578" text-anchor="middle" font-size="9" fill="#64748b">Unified dashboards (Jaeger + Prometheus + Loki)</text>
+  <text x="1055" y="592" text-anchor="middle" font-size="9" fill="#475569">Port 3000 · admin/admin · docker-compose</text>
+  <text x="1055" y="606" text-anchor="middle" font-size="9" fill="#475569">OTel Collector :4317 (gRPC) / :4318 (HTTP)</text>
+
+  <!-- ═══ FLOW LINES ═══ -->
+
+  <!-- Client → AgentCore (HTTP/SSE) -->
+  <line x1="175" y1="140" x2="210" y2="195" stroke="#4a9eff" stroke-width="2" class="flow-1" marker-end="url(#arrow-blue)"/>
+  <text x="150" y="162" font-size="8" fill="#4a9eff">HTTP/SSE</text>
+
+  <!-- Client → Cognito -->
+  <line x1="97" y1="216" x2="97" y2="238" stroke="#fb923c" stroke-width="1.5" class="flow-2" marker-end="url(#arrow-orange)"/>
+
+  <!-- InvocationsController → JwtUtil -->
+  <line x1="306" y1="323" x2="306" y2="338" stroke="#c084fc" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+
+  <!-- InvocationsController → Spring AI ChatClient -->
+  <line x1="388" y1="252" x2="403" y2="185" stroke="#4ade80" stroke-width="2" class="flow-1" marker-end="url(#arrow-green)"/>
+
+  <!-- Spring AI ChatClient → MessageWindowChatMemory (via advisor) -->
+  <line x1="500" y1="210" x2="500" y2="244" stroke="#c084fc" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+
+  <!-- MessageWindowChatMemory → AgentCoreChatMemoryRepository -->
+  <line x1="500" y1="282" x2="500" y2="291" stroke="#c084fc" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+
+  <!-- Spring AI ChatClient → Bedrock (Converse API) -->
+  <line x1="778" y1="172" x2="850" y2="155" stroke="#4ade80" stroke-width="2" class="flow-1" marker-end="url(#arrow-green)"/>
+  <text x="785" y="165" font-size="8" fill="#4ade80">Converse API</text>
+
+  <!-- AgentCoreChatMemoryRepository → AgentCore Memory (Events API, elbow path) -->
+  <path d="M 591 311 L 591 326 L 820 326 L 850 253" fill="none" stroke="#c084fc" stroke-width="2" class="flow-2" marker-end="url(#arrow-purple)"/>
+  <text x="680" y="321" font-size="8" fill="#c084fc">Events API</text>
+
+  <!-- Obs Stack → X-Ray (prod) -->
+  <line x1="470" y1="451" x2="125" y2="523" stroke="#fb923c" stroke-width="1.5" class="flow-3" marker-end="url(#arrow-orange)"/>
+  <!-- Obs Stack → CloudWatch (prod) -->
+  <line x1="535" y1="451" x2="310" y2="523" stroke="#4a9eff" stroke-width="1.5" class="flow-3" marker-end="url(#arrow-blue)"/>
+
+  <!-- Local OTel flows -->
+  <line x1="592" y1="451" x2="485" y2="523" stroke="#475569" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow-gray)"/>
+  <line x1="622" y1="451" x2="650" y2="523" stroke="#475569" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow-gray)"/>
+  <line x1="652" y1="451" x2="815" y2="523" stroke="#475569" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrow-gray)"/>
+
+  <!-- ═══ LEGEND ═══ -->
+  <rect x="20" y="703" width="1210" height="135" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="40" y="722" font-size="11" font-weight="600" fill="#94a3b8">Legend</text>
+
+  <line x1="40" y1="740" x2="80" y2="740" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="88" y="744" font-size="10" fill="#64748b">LLM inference (Bedrock Converse API)</text>
+
+  <line x1="40" y1="760" x2="80" y2="760" stroke="#4a9eff" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-blue)"/>
+  <text x="88" y="764" font-size="10" fill="#64748b">HTTP/SSE streaming</text>
+
+  <line x1="40" y1="780" x2="80" y2="780" stroke="#c084fc" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-purple)"/>
+  <text x="88" y="784" font-size="10" fill="#64748b">Conversation memory · Events API (conversationId = userId:sessionId)</text>
+
+  <line x1="40" y1="800" x2="80" y2="800" stroke="#fb923c" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-orange)"/>
+  <text x="88" y="804" font-size="10" fill="#64748b">Telemetry / OTLP export (ADOT agent)</text>
+
+  <line x1="40" y1="820" x2="80" y2="820" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow-gray)"/>
+  <text x="88" y="824" font-size="10" fill="#475569">Local dev only (docker-compose)</text>
+
+  <!-- Right legend column -->
+  <rect x="330" y="731" width="12" height="12" rx="3" fill="url(#aws-grad)" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="350" y="742" font-size="10" fill="#4ade80">AgentCore isolated microVM boundary</text>
+
+  <rect x="330" y="752" width="12" height="12" rx="3" fill="url(#aws-grad)" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="350" y="763" font-size="10" fill="#fbbf24">AWS managed services boundary</text>
+
+  <rect x="330" y="773" width="12" height="12" rx="3" fill="url(#obs-grad)" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="350" y="784" font-size="10" fill="#c084fc">Observability plane (prod + local)</text>
+
+  <rect x="330" y="794" width="12" height="12" rx="3" fill="url(#node-mem)" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="350" y="805" font-size="10" fill="#9f7aea">Spring AI Memory Chain (conditional on AGENTCORE_MEMORY_ID env var)</text>
+
+  <!-- Memory fallback callout -->
+  <rect x="620" y="728" width="600" height="55" rx="6" fill="#13111a" stroke="#4c1d95" stroke-width="1"/>
+  <text x="920" y="746" text-anchor="middle" font-size="9" font-weight="600" fill="#a78bfa">Memory Fallback Behaviour (AgentCoreMemoryConfig)</text>
+  <text x="920" y="761" text-anchor="middle" font-size="9" fill="#7c3aed">AGENTCORE_MEMORY_ID set   →  AgentCoreChatMemoryRepository (Events API, 30-day TTL)</text>
+  <text x="920" y="775" text-anchor="middle" font-size="9" fill="#4c1d95">AGENTCORE_MEMORY_ID unset →  Spring AI default InMemoryChatMemoryRepository</text>
+
+  <!-- Version stamp -->
+  <text x="1230" y="843" text-anchor="end" font-size="9" fill="#334155">generated 2026-04-12</text>
+</svg>
