@@ -13,15 +13,12 @@
 ![Procurement Negotiation Agentic System (PNAS)](./PNAS-Architecture-AWS.drawio.svg)
 
 ![Spring AI App deployed at AWS AgentCore](./infrastructure.svg)
-
 *Basic Generative AI app, built with Spring Boot 4, Spring AI 2 with full Observability, deployed at AWS Bedrock AgentCore*
 
 ![AI Teleprompter](./architecture.svg)
-
 *Browser-based AI Teleprompter for public speakers*
 
 ![Kafka Ingestor](./Kafka_Service.png)
-
 *Contract-based production of Avro events from a JSON payload to a Kafka Topic. Service converts a JSON payload to an Avro payload based on a verified schema and publishes it to a Kafka topic, using the Outbox Pattern*
 
 ![Side Kafka](./Side-Kafka-EN.png)
