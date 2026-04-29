@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 - 🔭 I'm currently Building AI/ML Infrastructure & Platforms
-- 🌱 I’ve worked to Improve Developer Experience in Generative AI, Agentic Systems, and Event-Driven Systems
+- 🌱 I’ve worked to improve Developer Experience in Generative AI, Agentic Systems, and Event-Driven Systems
 - 💻 Playing with Strands, LangGraph, MCP, KubeFlow, MLFlow.
 - 👯 I’m looking to collaborate on AI Open Source Projects
 - 🤔 I’m looking for Disruptive AI/ML Use Cases
@@ -9,6 +9,8 @@
 - 💬 Ask me about AI, Software Architecture, Observability, DDD, Data Mesh, CDC & Event-Driven Architecture
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
+
+![Procurement Negotiation Agentic System (PNAS)](./PNAS-Architecture-AWS.drawio.svg)
 
 ![Spring AI App deployed at AWS AgentCore](./infrastructure.svg)
 
