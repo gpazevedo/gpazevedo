@@ -11,6 +11,11 @@
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
 ![Procurement Negotiation Agentic System (PNAS)](./PNAS-Architecture-AWS.drawio.svg)
+This system was designed and developed through a deep integration of business strategy and high-fidelity engineering.
+
+To ensure the technical solution addressed real-world needs, I began by researching the business domain to propose a commercially sound architecture. The design phase involved defining the **core agent topology, governance models, and security posture**, using **PRDs with EARS requirements** to maintain formal traceability from business goals to technical specs.
+
+For the implementation, I built the end-to-end stack using **Strands agents on Python 3.14**, automating the deployment to **AgentCore** via **Terraform and GitHub Actions**. The system utilizes **AppConfig** for dynamic runtime configuration and includes dedicated strategies for **observability and cost optimization**. 
 
 ![Spring AI App deployed at AWS AgentCore](./infrastructure.svg)
 *Basic Generative AI app, built with Spring Boot 4, Spring AI 2 with full Observability, deployed at AWS Bedrock AgentCore*
