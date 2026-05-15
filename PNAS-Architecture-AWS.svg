@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1600 1198" role="img">
+  <title>Buyer Team Architecture — AWS</title>
+  <desc>Buyer Team architecture on AWS with Graph Orchestrator, A2A agents, AgentCore services, and infrastructure</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 50" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <filter id="ds" x="-8%" y="-8%" width="116%" height="116%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.10"/></filter></defs>
+  <rect x="0" y="0" width="1600" height="1198" fill="#F1F5F9" rx="0"/><rect x="0" y="0" width="1600.0" height="70" fill="#0F172A" rx="0" filter="url(#ds)"/><style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .title { font-size: 20px; font-weight: 700; fill: #0F172A; }
+    .subtitle { font-size: 12px; fill: #64748B; }
+    .hdr { font-size: 13px; font-weight: 700; }
+    .node-label { font-size: 11px; font-weight: 700; }
+    .node-sub { font-size: 10px; fill: #475569; }
+    .box-label { font-size: 12px; font-weight: 700; }
+    .svc-label { font-size: 11px; font-weight: 700; }
+    .legend-text { font-size: 10px; fill: #334155; }
+  </style>
+
+  <!-- Title -->
+  <text x="800" y="30" text-anchor="middle" class="title" fill="#FFFFFF" style="fill:#FFFFFF;;font-size:15px">Buyer Team</text>
+  <text x="800" y="52" text-anchor="middle" class="subtitle" fill="#94A3B8" style="fill:#94A3B8;">Strands + AgentCore + Terraform | Hybrid Graph + A2A Topology</text>
+
+  <!-- TENANT API LAYER -->
+  <rect x="160" y="90" width="1280" height="80" rx="8" fill="#F1F5F9" stroke="#94A3B8" stroke-dasharray="6,4" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="176" y="112" class="box-label" fill="#666">Tenant API Layer</text>
+
+  <rect x="220" y="120" width="40" height="35" rx="4" fill="#232F3E" filter="url(#ds)"/>
+  <text x="240" y="150" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">Users</text>
+  <text x="240" y="168" text-anchor="middle" class="legend-text">Tenant Users</text>
+
+  <line x1="270" y1="137" x2="430" y2="137" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="440" y="120" width="40" height="35" rx="4" fill="#DD344C" filter="url(#ds)"/>
+  <text x="460" y="138" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">Cognito</text>
+  <text x="460" y="168" text-anchor="middle" class="legend-text">Amazon Cognito</text>
+
+  <line x1="490" y1="137" x2="680" y2="137" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="690" y="120" width="40" height="35" rx="4" fill="#C7131F" filter="url(#ds)"/>
+  <text x="710" y="138" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">IAM</text>
+  <text x="710" y="168" text-anchor="middle" class="legend-text">AgentCore Identity (JWT)</text>
+
+  <!-- GRAPH ORCHESTRATOR -->
+  <rect x="160" y="190" width="1280" height="550" rx="12" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2" filter="url(#ds)"/>
+  <text x="176" y="214" class="box-label" fill="#5E35B1">Graph Orchestrator — AgentCore Runtime (Strands Graph DAG)</text>
+
+  <!-- Node 1: Ingest & Validate -->
+  <rect x="650" y="230" width="220" height="46" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="760" y="248" text-anchor="middle" class="node-label" fill="#555">Node 1: Ingest &amp; Validate</text>
+  <text x="760" y="264" text-anchor="middle" class="node-sub">Python — no LLM</text>
+
+  <line x1="760" y1="276" x2="760" y2="298" stroke="#7E57C2" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 2: Kraljic Classifier -->
+  <rect x="650" y="300" width="220" height="46" rx="6" fill="#E0F2F1" stroke="#00897B" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="760" y="318" text-anchor="middle" class="node-label" fill="#00695C">Node 2: Kraljic Classifier</text>
+  <text x="760" y="334" text-anchor="middle" class="node-sub">A2A Agent · SimpleLLM</text>
+
+  <line x1="760" y1="346" x2="760" y2="368" stroke="#7E57C2" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 3: Strategy Router -->
+  <rect x="650" y="370" width="220" height="46" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="760" y="388" text-anchor="middle" class="node-label" fill="#555">Node 3: Strategy Router</text>
+  <text x="760" y="404" text-anchor="middle" class="node-sub">Deterministic — no LLM</text>
+
+  <!-- Branching arrows from N3 to 4a-4d -->
+  <line x1="680" y1="416" x2="320" y2="456" stroke="#D84315" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="720" y1="416" x2="640" y2="456" stroke="#D84315" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="800" y1="416" x2="960" y2="456" stroke="#D84315" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="840" y1="416" x2="1280" y2="456" stroke="#D84315" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 4a: Spot Bidding -->
+  <rect x="220" y="456" width="200" height="46" rx="6" fill="#FBE9E7" stroke="#D84315" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="320" y="474" text-anchor="middle" class="node-label" fill="#BF360C">Node 4a: Spot Bidding</text>
+  <text x="320" y="490" text-anchor="middle" class="node-sub">A2A Agent · SimpleLLM</text>
+
+  <!-- Node 4b: Leverage Auction -->
+  <rect x="540" y="456" width="200" height="46" rx="6" fill="#FBE9E7" stroke="#D84315" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="640" y="474" text-anchor="middle" class="node-label" fill="#BF360C">Node 4b: Leverage Auction</text>
+  <text x="640" y="490" text-anchor="middle" class="node-sub">A2A Agent · DefaultLLM</text>
+
+  <!-- Node 4c: Bottleneck Negotiation -->
+  <rect x="860" y="456" width="200" height="46" rx="6" fill="#FBE9E7" stroke="#D84315" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="960" y="474" text-anchor="middle" class="node-label" fill="#BF360C">Node 4c: Bottleneck Negotiation</text>
+  <text x="960" y="490" text-anchor="middle" class="node-sub">A2A Agent · DefaultLLM</text>
+
+  <!-- Node 4d: Strategic Partnership -->
+  <rect x="1175" y="456" width="210" height="46" rx="6" fill="#FBE9E7" stroke="#D84315" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="1280" y="474" text-anchor="middle" class="node-label" fill="#BF360C">Node 4d: Strategic Partnership</text>
+  <text x="1280" y="490" text-anchor="middle" class="node-sub">A2A Agent · DefaultLLM</text>
+
+  <!-- Convergence arrows to Node 5 -->
+  <line x1="320" y1="502" x2="700" y2="536" stroke="#1565C0" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="640" y1="502" x2="735" y2="536" stroke="#1565C0" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="960" y1="502" x2="785" y2="536" stroke="#1565C0" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="1280" y1="502" x2="820" y2="536" stroke="#1565C0" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 5: Bid Evaluation -->
+  <rect x="650" y="536" width="220" height="46" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="760" y="554" text-anchor="middle" class="node-label" fill="#0D47A1">Node 5: Bid Evaluation</text>
+  <text x="760" y="570" text-anchor="middle" class="node-sub">A2A Agent · DefaultLLM</text>
+
+  <line x1="760" y1="582" x2="760" y2="604" stroke="#F9A825" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 6: Approval Gate -->
+  <rect x="650" y="606" width="220" height="46" rx="6" fill="#FFF8E1" stroke="#F9A825" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="760" y="624" text-anchor="middle" class="node-label" fill="#F57F17">Node 6: Approval Gate</text>
+  <text x="760" y="640" text-anchor="middle" class="node-sub">Human-in-the-Loop</text>
+
+  <line x1="760" y1="652" x2="760" y2="674" stroke="#00897B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 7: Award & Comms -->
+  <rect x="650" y="676" width="220" height="46" rx="6" fill="#E0F2F1" stroke="#00897B" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="760" y="694" text-anchor="middle" class="node-label" fill="#00695C">Node 7: Award &amp; Comms</text>
+  <text x="760" y="710" text-anchor="middle" class="node-sub">A2A Agent · SimpleLLM</text>
+
+  <!-- AMAZON BEDROCK -->
+  <rect x="160" y="760" width="560" height="70" rx="8" fill="#FFF3E0" stroke="#E65100" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="176" y="782" class="box-label" fill="#BF360C">Amazon Bedrock — Foundation Models</text>
+
+  <rect x="190" y="790" width="140" height="28" rx="4" fill="#fff" stroke="#E65100" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="260" y="808" text-anchor="middle" class="svc-label" fill="#BF360C">Claude SimpleLLM</text>
+
+  <rect x="400" y="790" width="140" height="28" rx="4" fill="#fff" stroke="#E65100" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="470" y="808" text-anchor="middle" class="svc-label" fill="#BF360C">Claude DefaultLLM</text>
+
+  <!-- SECURITY & GOVERNANCE -->
+  <rect x="760" y="760" width="680" height="70" rx="8" fill="#FFEBEE" stroke="#C62828" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="776" y="782" class="box-label" fill="#B71C1C">Security &amp; Governance</text>
+
+  <rect x="790" y="790" width="140" height="28" rx="4" fill="#fff" stroke="#C62828" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="860" y="808" text-anchor="middle" class="svc-label" fill="#C62828">Bedrock Guardrails</text>
+
+  <rect x="960" y="790" width="170" height="28" rx="4" fill="#fff" stroke="#C62828" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="1045" y="808" text-anchor="middle" class="svc-label" fill="#C62828">AgentCore Policy (Cedar)</text>
+
+  <rect x="1160" y="790" width="140" height="28" rx="4" fill="#fff" stroke="#C62828" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="1230" y="808" text-anchor="middle" class="svc-label" fill="#C62828">Steering Hooks</text>
+
+  <!-- AGENTCORE PLATFORM SERVICES -->
+  <rect x="160" y="850" width="1280" height="70" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" filter="url(#ds)"/>
+  <text x="176" y="872" class="box-label" fill="#0D47A1">Amazon Bedrock AgentCore — Platform Services</text>
+
+  <rect x="190" y="880" width="110" height="28" rx="4" fill="#fff" stroke="#1565C0" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="245" y="898" text-anchor="middle" class="svc-label" fill="#1565C0">Runtime</text>
+
+  <rect x="330" y="880" width="110" height="28" rx="4" fill="#fff" stroke="#1565C0" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="385" y="898" text-anchor="middle" class="svc-label" fill="#1565C0">Memory</text>
+
+  <rect x="470" y="880" width="120" height="28" rx="4" fill="#fff" stroke="#1565C0" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="530" y="898" text-anchor="middle" class="svc-label" fill="#1565C0">Gateway (A2A/MCP)</text>
+
+  <rect x="620" y="880" width="110" height="28" rx="4" fill="#fff" stroke="#1565C0" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="675" y="898" text-anchor="middle" class="svc-label" fill="#1565C0">Identity</text>
+
+  <rect x="880" y="880" width="120" height="28" rx="4" fill="#fff" stroke="#1565C0" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="940" y="898" text-anchor="middle" class="svc-label" fill="#1565C0">Observability</text>
+
+  <rect x="1140" y="880" width="120" height="28" rx="4" fill="#fff" stroke="#1565C0" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="1200" y="898" text-anchor="middle" class="svc-label" fill="#1565C0">Evaluations</text>
+
+  <!-- DATA & STORAGE -->
+  <rect x="160" y="940" width="640" height="80" rx="8" fill="#F1F5F9" stroke="#94A3B8" stroke-dasharray="6,4" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="176" y="962" class="box-label" fill="#666">Data &amp; Storage</text>
+
+  <rect x="200" y="972" width="40" height="35" rx="4" fill="#3F8624" filter="url(#ds)"/>
+  <text x="220" y="990" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">DDB</text>
+  <text x="220" y="1018" text-anchor="middle" class="legend-text">DynamoDB</text>
+
+  <rect x="340" y="972" width="40" height="35" rx="4" fill="#3F8624" filter="url(#ds)"/>
+  <text x="360" y="990" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">S3</text>
+  <text x="360" y="1018" text-anchor="middle" class="legend-text">S3</text>
+
+  <rect x="480" y="972" width="40" height="35" rx="4" fill="#E7157B" filter="url(#ds)"/>
+  <text x="500" y="990" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">SQS</text>
+  <text x="500" y="1018" text-anchor="middle" class="legend-text">SQS (DLQ)</text>
+
+  <rect x="620" y="972" width="40" height="35" rx="4" fill="#E7157B" filter="url(#ds)"/>
+  <text x="640" y="985" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">EB</text>
+  <text x="640" y="1018" text-anchor="middle" class="legend-text">EventBridge</text>
+
+  <!-- OPERATIONS & CONFIGURATION -->
+  <rect x="840" y="940" width="600" height="80" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-dasharray="6,4" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="856" y="962" class="box-label" fill="#1B5E20">Operations &amp; Configuration</text>
+
+  <rect x="880" y="972" width="40" height="35" rx="4" fill="#E7157B" filter="url(#ds)"/>
+  <text x="900" y="985" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">CW</text>
+  <text x="900" y="1018" text-anchor="middle" class="legend-text">CloudWatch</text>
+
+  <rect x="1040" y="972" width="40" height="35" rx="4" fill="#E7157B" filter="url(#ds)"/>
+  <text x="1060" y="985" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">AC</text>
+  <text x="1060" y="1018" text-anchor="middle" class="legend-text">AppConfig</text>
+
+  <rect x="1200" y="972" width="40" height="35" rx="4" fill="#DD344C" filter="url(#ds)"/>
+  <text x="1220" y="990" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">KMS</text>
+  <text x="1220" y="1018" text-anchor="middle" class="legend-text">KMS</text>
+
+  <!-- CI/CD & GITOPS -->
+  <rect x="160" y="1040" width="1280" height="80" rx="8" fill="#F1F5F9" stroke="#94A3B8" stroke-dasharray="6,4" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="176" y="1062" class="box-label" fill="#666">CI/CD &amp; GitOps</text>
+
+  <rect x="200" y="1070" width="130" height="30" rx="4" fill="#fff" stroke="#666" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="265" y="1089" text-anchor="middle" class="svc-label" fill="#444">GitHub Actions</text>
+
+  <line x1="340" y1="1085" x2="400" y2="1085" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="410" y="1070" width="40" height="30" rx="4" fill="#E7157B" filter="url(#ds)"/>
+  <text x="430" y="1089" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">ECR</text>
+
+  <line x1="460" y1="1085" x2="530" y2="1085" stroke="#475569" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="540" y="1070" width="130" height="30" rx="4" fill="#fff" stroke="#666" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="605" y="1089" text-anchor="middle" class="svc-label" fill="#444">Terraform (IaC)</text>
+
+  <rect x="780" y="1070" width="160" height="30" rx="4" fill="#fff" stroke="#666" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="860" y="1089" text-anchor="middle" class="svc-label" fill="#444">OIDC Auth (no secrets)</text>
+
+  <rect x="1050" y="1070" width="160" height="30" rx="4" fill="#fff" stroke="#666" stroke-width="1.5" filter="url(#ds)"/>
+  <text x="1130" y="1089" text-anchor="middle" class="svc-label" fill="#444">Semver Tags (v1.2.0)</text>
+
+  <!-- LEGEND -->
+  <text x="160" y="1146" font-size="12" font-weight="700" fill="#333">Legend</text>
+
+  <rect x="240" y="1136" width="16" height="12" rx="2" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2"/>
+  <text x="264" y="1146" class="legend-text">Graph orchestrator</text>
+
+  <rect x="390" y="1136" width="16" height="12" rx="2" fill="#FBE9E7" stroke="#D84315" stroke-width="1.5"/>
+  <text x="414" y="1146" class="legend-text">Negotiation agents (A2A)</text>
+
+  <rect x="570" y="1136" width="16" height="12" rx="2" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/>
+  <text x="594" y="1146" class="legend-text">Evaluation</text>
+
+  <rect x="680" y="1136" width="16" height="12" rx="2" fill="#E0F2F1" stroke="#00897B" stroke-width="1.5"/>
+  <text x="704" y="1146" class="legend-text">Classification / comms</text>
+
+  <rect x="840" y="1136" width="16" height="12" rx="2" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="864" y="1146" class="legend-text">Deterministic (no LLM)</text>
+
+  <rect x="1010" y="1136" width="16" height="12" rx="2" fill="#FFF8E1" stroke="#F9A825" stroke-width="1.5"/>
+  <text x="1034" y="1146" class="legend-text">Human-in-the-loop</text>
+
+</svg>
