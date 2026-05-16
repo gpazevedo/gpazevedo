@@ -10,7 +10,7 @@
 - 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
 - ⚡ Fun fact: I feel like "I'm Back to School !"
 
-![Procurement Negotiation Agentic System (PNAS)](./PNAS-Architecture-AWS.drawio.svg)
+![Procurement Negotiation Agentic System (PNAS)](./PNAS-Architecture-AWS.svg)
 This system was designed and developed through a deep integration of business strategy and high-fidelity engineering.
 
 To ensure the technical solution addressed real-world needs, I began by researching the business domain to propose a commercially sound architecture. The design phase involved defining the **core agent topology, governance models, and security posture**, using **PRDs with EARS requirements** to maintain formal traceability from business goals to technical specs.
