@@ -1,50 +1,84 @@
-### Hi there 👋
+# Gustavo Peixoto de Azevedo
 
-- 🔭 I'm currently Building AI/ML Infrastructure & Platforms
-- 🌱 I’ve worked to improve Developer Experience in Generative AI, Agentic Systems, and Event-Driven Systems
-- 💻 Playing with Strands, LangGraph, MCP, KubeFlow, MLFlow.
-- 👯 I’m looking to collaborate on AI Open Source Projects
-- 🤔 I’m looking for Disruptive AI/ML Use Cases
-- 🚀 I'm learning BedRock AgentCore
-- 💬 Ask me about AI, Software Architecture, Observability, DDD, Data Mesh, CDC & Event-Driven Architecture
-- 📫 How to reach me: https://www.linkedin.com/in/gpazevedo/
-- ⚡ Fun fact: I feel like "I'm Back to School !"
+**AI Solution Architect — Agentic Systems · Bedrock AgentCore · Strands · Event-Driven Architectures**
 
+I design and build production agentic systems end-to-end — from business concept to production
+and evolution. 25+ years architecting business and distributed systems. M.Sc. Computer & Systems
+Engineering, UFRJ.
 
-![Agent/Service Generator](./Agent-Generator-architecture-functional.svg)
-Generator of Production Ready AWS Services and/or AI Agents skeletons running on Lambdas or AppRunner with full Observability and GitOps
+🔗 [buyer-team.com](https://buyer-team.com) · [About / CV](https://buyer-team.com/about.html) ·
+[LinkedIn](https://www.linkedin.com/in/gpazevedo/) · ✉️ gustavo.peixoto.de.azevedo@gmail.com
 
-![Procurement Negotiation Agentic System (Buyer Team)](./PNAS-Architecture-AWS.svg)
-The Buyer Team was designed and developed through a deep integration of business strategy and high-fidelity engineering.
+> **Open to senior architect and IC roles building agentic systems.** If your team is building
+> production agents and wants someone who has shipped one end-to-end — let's talk.
 
-To ensure the technical solution addressed real-world needs, I began by researching the business domain to propose a commercially sound architecture. The design phase involved defining the **core agent topology, governance models, and security posture**, using **PRDs with EARS requirements** to maintain formal traceability from business goals to technical specs.
+---
 
-For the implementation, I built the end-to-end stack using **Strands agents on Python 3.14**, automating the deployment to **AgentCore** via **Terraform and GitHub Actions**. The system utilizes **AppConfig** for dynamic runtime configuration and includes dedicated strategies for **observability and cost optimization**. 
+## 🚀 Current build — Buyer Team
 
-![Spring AI App deployed at AWS AgentCore](./infrastructure.svg)
-*Basic Generative AI app, built with Spring Boot 4, Spring AI 2 with full Observability, deployed at AWS Bedrock AgentCore*
+**[Buyer Team](https://buyer-team.com)** is my flagship: an autonomous, multi-tenant
+procurement-negotiation platform I architected and built end-to-end on **Amazon Bedrock AgentCore**
+and the **Strands Agents SDK**.
+
+![Buyer Team — Procurement Negotiation Agentic System](./PNAS-Architecture-AWS.svg)
+
+It ingests purchase requisitions, classifies them on the **Kraljic matrix** (profit impact × supply
+risk), routes each to the right negotiation strategy — spot bid, competitive auction, risk-managed
+partnership, or strategic engagement — and runs the full cycle autonomously: supplier invitations,
+multi-round bidding, evaluation against governance rules, and Purchase Order assembly. All audited,
+at **minimum AI cost per negotiation** via a four-layer cost-optimization architecture.
+
+**Stack:** `Strands Agents SDK` · `Amazon Bedrock AgentCore` (Runtime, Memory, Gateway, Identity) ·
+`Python 3.14 / FastAPI` · `Next.js` · `MCP` (SAP S/4HANA · Oracle Fusion · Coupa) · multi-tenant by
+design · OWASP Agentic 2026 mapping · MITRE ATLAS threat model · 7-year immutable audit trail ·
+GitOps with Terraform & GitHub Actions.
+
+**Engineering write-ups:**
+- [Why we chose a deterministic DAG over a pure LLM planner](https://buyer-team.com/blog/eng/dag-vs-llm-planner.html)
+- [The 80% Problem: why tail spend never gets negotiated](https://buyer-team.com/blog/procurement/the-80-percent-problem.html)
+- More at [buyer-team.com](https://buyer-team.com)
+
+---
+
+## 🛠 Open-source contributions
+
+- [`awslabs/fullstack-solution-template-for-agentcore`](https://github.com/awslabs/fullstack-solution-template-for-agentcore) — AWS reference AgentCore agentic system
+- [`aws-samples/sample-strands-agent-with-agentcore`](https://github.com/aws-samples/sample-strands-agent-with-agentcore) — Strands / Bedrock / AgentCore reference architecture
+- [`spring-ai-community/spring-ai-agentcore`](https://github.com/spring-ai-community/spring-ai-agentcore) — Spring AI integration for Bedrock AgentCore
+- [`SYSTRAN/faster-whisper`](https://github.com/SYSTRAN/faster-whisper) — fast speech-to-text
+- [`sivaprasadreddy/sivalabs-agent-skills`](https://github.com/sivaprasadreddy/sivalabs-agent-skills) — Spring Boot AI skill
+
+## 🧭 Background
+
+Staff Engineer on streaming data platforms (Grupo SBF — Nike Brasil, Centauro) · Platform Engineer
+at **Zwift** (300k concurrent users, real-time leaderboards) · Founding-team engineering (Grepr).
+Earlier: co-founder & CTO building enterprise systems for Petrobras, GE, and Saint-Gobain;
+OS/distributed-systems research at NCE/UFRJ.
+
+Ask me about: agentic systems · AWS Bedrock AgentCore · software architecture · observability ·
+DDD · CDC & event-driven architecture.
+
+---
+
+## 📐 Selected architecture work
+
+![Agent / Service Generator](./Agent-Generator-architecture-functional.svg)
+*Generator of production-ready AWS services and AI-agent skeletons on Lambda / App Runner with full Observability and GitOps*
+
+![Spring AI app on AWS AgentCore](./infrastructure.svg)
+*Generative-AI app built with Spring Boot 4 + Spring AI 2, full Observability, deployed on Bedrock AgentCore*
 
 ![AI Teleprompter](./architecture.svg)
-*Browser-based AI Teleprompter for public speakers*
+*Browser-based AI teleprompter for public speakers*
 
 ![Kafka Ingestor](./Kafka_Service.png)
-*Contract-based production of Avro events from a JSON payload to a Kafka Topic. Service converts a JSON payload to an Avro payload based on a verified schema and publishes it to a Kafka topic, using the Outbox Pattern*
-
-![Side Kafka](./Side-Kafka-EN.png)
-
-*Sidecar that converts a JSON payload to Avro payload based on a verified schema and publishes it to a Kafka topic*
+*Contract-based Avro event production from a JSON payload, using the Outbox Pattern*
 
 ![Kafka DLQ on Apache Beam](./Beam_Kafka_DLQ.png)
 *Kafka Dead Letter Queue on Apache Beam*
 
-![Goals Service](./Goals_Service.jpg)
-*Goals Service*
-
 ![Event Modelling](./blueprint.jpg)
-*Hotel Event Modelling*
+*Hotel event modelling*
 
-![CQRS](https://github.com/gpazevedo/account_api/blob/main/docs/Accounts_API.png)
-*Syncronous Bank API*
-
-![ETL Hexagonal](./CoffeeShop_Architecture.png) <br>
-*Shop Accounting*
+![ETL Hexagonal](./CoffeeShop_Architecture.png)
+*Shop accounting — hexagonal ETL*
