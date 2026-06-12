@@ -47,6 +47,13 @@ GitOps with Terraform & GitHub Actions.
 - [How we chose where to run Buyer Team's Agents](https://www.linkedin.com/feed/update/urn:li:ugcPost:7469743193010663424?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7469743193010663424%2C7469768631191584769%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287469768631191584769%2Curn%3Ali%3AugcPost%3A7469743193010663424%29)
 - [How we decided how to build Buyer Team's Agents](https://www.linkedin.com/feed/update/urn:li:ugcPost:7470575803668353024?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7470575803668353024%2C7470734283976945666%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287470734283976945666%2Curn%3Ali%3AugcPost%3A7470575803668353024%29)
 
+
+## 🚀 Current build — Atlas Counsel
+
+**ATLAS Counsel** — a procurement-knowledge RAG agent that answers buyers' questions ("what does our policy say about single-source justification above $50k?", "summarize the SLA clauses across these three vendor contracts") with citation-grounded answers, and a negotiation pre-brief generator.
+
+![ATLAS Counsel — Procurement Knowledge RAG Agent that answers buyers' questions](./atlas-counsel-architecture.svg)
+
 ---
 
 ## 🛠 Open-source contributions
