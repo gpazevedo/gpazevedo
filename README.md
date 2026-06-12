@@ -33,10 +33,19 @@ at **minimum AI cost per negotiation** via a four-layer cost-optimization archit
 design · OWASP Agentic 2026 mapping · MITRE ATLAS threat model · 7-year immutable audit trail ·
 GitOps with Terraform & GitHub Actions.
 
+**Business write-ups:**
+- [The 80% Problem: why tail spend never gets negotiated](https://buyer-team.com/blog/procurement/the-80-percent-problem.html)
+
 **Engineering write-ups:**
 - [Why we chose a deterministic DAG over a pure LLM planner](https://buyer-team.com/blog/eng/dag-vs-llm-planner.html)
-- [The 80% Problem: why tail spend never gets negotiated](https://buyer-team.com/blog/procurement/the-80-percent-problem.html)
+- [Why we chose Bedrock AgentCore to run Buyer Team](https://buyer-team.com/blog/eng/why-we-chose-agentcore)
+- [How we decided to build Buyer Team](https://buyer-team.com/blog/eng/why-we-chose-strands)
+- [How we implemented durable execution in Buyer Team](https://buyer-team.com/blog/eng/durable-orchestration)
 - More at [buyer-team.com](https://buyer-team.com)
+
+**LinkedIn posts**
+- [How we chose where to run Buyer Team's Agents]([https://buyer-team.com/blog/eng/dag-vs-llm-planner.html](https://www.linkedin.com/feed/update/urn:li:ugcPost:7469743193010663424?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7469743193010663424%2C7469768631191584769%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287469768631191584769%2Curn%3Ali%3AugcPost%3A7469743193010663424%29)
+- [How we decided how to build Buyer Team's Agents](https://www.linkedin.com/feed/update/urn:li:ugcPost:7470575803668353024?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7470575803668353024%2C7470734283976945666%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287470734283976945666%2Curn%3Ali%3AugcPost%3A7470575803668353024%29)
 
 ---
 
