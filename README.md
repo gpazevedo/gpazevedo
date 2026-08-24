@@ -30,10 +30,7 @@ at **minimum AI cost per negotiation** via a four-layer cost-optimization archit
 
 ![Buyer Team — Procurement Negotiation Agentic System](./buyer-team/Buyer-Team-AWS-Architecture.svg)
 
-**Stack:** `Strands Agents SDK` · `Amazon Bedrock AgentCore` (Runtime, Memory, Gateway, Identity) ·
-`Python 3.14 / FastAPI` · `Next.js` · `MCP` (SAP S/4HANA · Oracle Fusion · Coupa) · multi-tenant by
-design · OWASP Agentic 2026 mapping · MITRE ATLAS threat model · 7-year immutable audit trail ·
-GitOps with Terraform & GitHub Actions.
+Buyer Team on AWS, generated from the Terraform: Cognito and AgentCore gateways at the edge, a Step Functions workflow driving seven step-invoker Lambdas and six negotiation agents, Bedrock model tiers behind Guardrails, DynamoDB checkpoints, SQS with DLQs, SES delivery, and an evaluation loop into SageMaker Ground Truth. Runtimes execute in private subnets behind VPC endpoints.
 
 **Business write-ups:**
 
@@ -57,7 +54,6 @@ GitOps with Terraform & GitHub Actions.
 **ATLAS Counsel** — a procurement-knowledge RAG agent that answers buyers' questions ("what does our policy say about single-source justification above $50k?", "summarize the SLA clauses across these three vendor contracts") with citation-grounded answers, and a negotiation pre-brief generator.
 
 ![ATLAS Counsel — Procurement Knowledge RAG Agent that answers buyers' questions](./atlas-counsel/atlas-counsel-architecture.svg)
-
 
 ## Spring GenAI
 
