@@ -1,0 +1,347 @@
+<svg viewBox="0 0 1280 848" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="0%" r="120%">
+      <stop offset="0" stop-color="#152238"/>
+      <stop offset="0.55" stop-color="#0e1626"/>
+      <stop offset="1" stop-color="#0a111d"/>
+    </radialGradient>
+    <linearGradient id="queryFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#182a44"/>
+      <stop offset="1" stop-color="#131f31"/>
+    </linearGradient>
+    <linearGradient id="agentFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#183226"/>
+      <stop offset="1" stop-color="#12251c"/>
+    </linearGradient>
+    <linearGradient id="evalFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#221f16"/>
+      <stop offset="1" stop-color="#191811"/>
+    </linearGradient>
+    <linearGradient id="answerFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#17311f"/>
+      <stop offset="1" stop-color="#153726"/>
+    </linearGradient>
+    <linearGradient id="titleText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#9fc6ff"/>
+    </linearGradient>
+    <linearGradient id="blueUnder" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5b87c4"/>
+      <stop offset="1" stop-color="#5b87c400"/>
+    </linearGradient>
+    <linearGradient id="greenUnder" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5fae9a"/>
+      <stop offset="1" stop-color="#5fae9a00"/>
+    </linearGradient>
+    <linearGradient id="amberUnder" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cf9b5b"/>
+      <stop offset="1" stop-color="#cf9b5b00"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f6e5e"/>
+      <stop offset="1" stop-color="#5fae9a"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#6f9fdc"/>
+    </marker>
+    <marker id="arrowDim" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4a6178"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7fa35f"/>
+    </marker>
+    <marker id="arrowEval" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#cf9b5b"/>
+    </marker>
+    <marker id="arrowMcp" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#5fae9a"/>
+    </marker>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .title { fill:url(#titleText); font-size:32px; font-weight:800; letter-spacing:0.5px; }
+      .subtitle { fill:#8298b3; font-size:14px; letter-spacing:2px; }
+      .lane { fill:#a9bdd6; font-size:13px; font-weight:700; letter-spacing:2px; }
+      .node-t { fill:#eaf1fb; font-size:15px; font-weight:600; }
+      .node-s { fill:#9db3d0; font-size:11.5px; }
+      .pill { fill:#9fb8d8; font-size:10.5px; font-weight:600; letter-spacing:1px; }
+      .tag { fill:#7992b0; font-size:10px; letter-spacing:1px; }
+      .legend { fill:#93a9c6; font-size:12px; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="848" fill="url(#bg)"/>
+
+  <!-- header -->
+  <g filter="url(#glow)">
+    <rect x="56" y="34" width="34" height="34" rx="9" fill="url(#badge)"/>
+    <path d="M65,51 l5,5 l9,-11" fill="none" stroke="#0a111d" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="102" y="60" class="title">ATLAS Counsel</text>
+  <text x="104" y="82" class="subtitle">CITATION-GROUNDED AGENTIC RAG · ARCHITECTURE OVERVIEW</text>
+  <text x="1224" y="52" text-anchor="end" class="subtitle">COMPLEMENTARY SERVICE</text>
+  <text x="1224" y="72" text-anchor="end" class="subtitle" fill="#5fae9a">TO BUYER TEAM</text>
+
+  <!-- ============ INGEST LANE ============ -->
+  <text x="56" y="132" class="lane">INGEST · TWO SOURCES, ONE PIPELINE</text>
+  <rect x="56" y="140" width="316" height="3" rx="1.5" fill="url(#blueUnder)"/>
+
+  <!-- source 1: the shipped corpus generator (operator CLI) -->
+  <g filter="url(#cardShadow)">
+    <rect x="56" y="158" width="152" height="100" rx="10" fill="#182a44" stroke="#33507a" stroke-width="1.2"/>
+    <rect x="56" y="158" width="4" height="100" rx="2" fill="#5b87c4"/>
+    <text x="72" y="184" class="node-t" style="font-size:13.5px;">Corpus Generator</text>
+    <text x="72" y="205" class="node-s" style="font-size:10.5px;">operator CLI · seeded</text>
+    <text x="72" y="221" class="node-s" style="font-size:10.5px;">no LLM, no network</text>
+    <text x="72" y="237" class="node-s" style="font-size:10.5px;">8 docs · 24 spans</text>
+    <text x="72" y="252" class="tag" style="font-size:9.5px;">POL-001#S1</text>
+  </g>
+
+  <!-- source 2: tenant-supplied documents over the authenticated MCP surface -->
+  <g filter="url(#cardShadow)">
+    <rect x="220" y="158" width="152" height="100" rx="10" fill="#182a44" stroke="#3f7a68" stroke-width="1.2"/>
+    <rect x="220" y="158" width="4" height="100" rx="2" fill="#5fae9a"/>
+    <text x="236" y="184" class="node-t" style="font-size:13.5px;">Tenant Documents</text>
+    <text x="236" y="205" class="node-s" style="font-size:10.5px;">counsel_ingest (MCP)</text>
+    <text x="236" y="221" class="node-s" style="font-size:10.5px;">caller-supplied spans</text>
+    <text x="236" y="237" class="node-s" style="font-size:10.5px;">replace per doc_id</text>
+    <text x="236" y="252" class="tag" style="font-size:9.5px;">ADR-0031 · per tenant</text>
+  </g>
+
+  <line x1="132" y1="258" x2="132" y2="292" stroke="#6f9fdc" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="296" y1="258" x2="296" y2="292" stroke="#5fae9a" stroke-width="1.8" marker-end="url(#arrowMcp)"/>
+
+  <!-- chunk + embed -->
+  <g filter="url(#cardShadow)">
+    <rect x="56" y="298" width="316" height="88" rx="10" fill="#182a44" stroke="#33507a" stroke-width="1.2"/>
+    <rect x="56" y="298" width="4" height="88" rx="2" fill="#5b87c4"/>
+    <text x="74" y="326" class="node-t">Chunk → Dual Embed</text>
+    <text x="74" y="348" class="node-s">1 chunk ≈ 1 span (carries span_id through)</text>
+    <text x="74" y="366" class="node-s">dense + sparse vectors per chunk</text>
+    <text x="74" y="381" class="tag">&lt;doc_id&gt;#S&lt;n&gt; — same citation contract either way</text>
+  </g>
+
+  <line x1="214" y1="386" x2="214" y2="414" stroke="#6f9fdc" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- vector store: opensearch serverless nextgen -->
+  <text x="372" y="412" class="pill" text-anchor="end" fill="#7fc7a8">SCALES TO ZERO</text>
+  <g filter="url(#cardShadow)">
+    <rect x="56" y="420" width="316" height="100" rx="10" fill="#182a44" stroke="#33507a" stroke-width="1.2"/>
+    <rect x="56" y="420" width="4" height="100" rx="2" fill="#5b87c4"/>
+    <text x="74" y="448" class="node-t">OpenSearch Serverless NextGen</text>
+    <text x="74" y="470" class="node-s">knn_vector (dense) + BM25 (sparse), one index</text>
+    <text x="74" y="488" class="node-s">index = counsel_{space_id}_{tenant_id}</text>
+    <text x="74" y="506" class="tag">prod: counsel_titan-v2_acme · ADR-0029</text>
+  </g>
+
+  <!-- falkordb graph store (optional, parallel to qdrant) -->
+  <path d="M56,204 C20,204 20,571 52,571" fill="none" stroke="#5b87c4" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrowDim)"/>
+  <g filter="url(#cardShadow)">
+    <rect x="56" y="530" width="316" height="82" rx="10" fill="#16243a" stroke="#33507a" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="74" y="558" class="node-t">FalkorDB — Graph Store (optional)</text>
+    <text x="74" y="578" class="node-s">six deterministic relation edges · ADR-0024</text>
+    <text x="74" y="596" class="tag">off by default · ATLAS_GRAPH=falkordb to enable</text>
+  </g>
+
+  <!-- ============ ONLINE QUERY LANE ============ -->
+  <text x="436" y="132" class="lane">ONLINE · QUERY PIPELINE</text>
+  <rect x="436" y="140" width="516" height="3" rx="1.5" fill="url(#blueUnder)"/>
+
+  <g filter="url(#cardShadow)">
+    <rect x="436" y="158" width="516" height="354" rx="14" fill="url(#queryFill)" stroke="#33507a" stroke-width="1.3"/>
+  </g>
+  <rect x="436" y="158" width="4" height="354" rx="2" fill="#5b87c4"/>
+
+  <!-- user query in -->
+  <g>
+    <rect x="460" y="180" width="220" height="56" rx="9" fill="#20375a" stroke="#3d5c8c" stroke-width="1.2"/>
+    <text x="478" y="204" class="node-t">User Question</text>
+    <text x="478" y="222" class="node-s">"who approves a $60k purchase?"</text>
+  </g>
+
+  <!-- decompose -->
+  <g>
+    <rect x="460" y="256" width="220" height="62" rx="9" fill="#182a44" stroke="#2c405d" stroke-width="1.2"/>
+    <text x="478" y="280" class="node-t">Query Decomposition</text>
+    <text x="478" y="298" class="node-s">conditional · splits compare queries</text>
+    <text x="664" y="252" class="pill" text-anchor="end">OPTIONAL</text>
+  </g>
+
+  <!-- retrieve + merge -->
+  <g>
+    <rect x="460" y="338" width="220" height="62" rx="9" fill="#182a44" stroke="#2c405d" stroke-width="1.2"/>
+    <text x="478" y="362" class="node-t">Hybrid Retrieve + Merge</text>
+    <text x="478" y="379" class="node-s">dense + sparse + graph (gated)</text>
+    <text x="478" y="394" class="tag">RRF, fused client-side on AOSS</text>
+  </g>
+
+  <!-- rerank -->
+  <g>
+    <rect x="460" y="420" width="220" height="62" rx="9" fill="#182a44" stroke="#2c405d" stroke-width="1.2"/>
+    <text x="478" y="444" class="node-t">Rerank</text>
+    <text x="448" y="502" class="tag">these stages run inside the graph's plan / retrieve nodes</text>
+    <text x="478" y="462" class="node-s">cross-encoder over short list</text>
+    <text x="664" y="416" class="pill" text-anchor="end">OPTIONAL</text>
+  </g>
+
+  <!-- vertical flow arrows in query box -->
+  <line x1="570" y1="236" x2="570" y2="250" stroke="#6f9fdc" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="570" y1="318" x2="570" y2="332" stroke="#6f9fdc" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="570" y1="400" x2="570" y2="414" stroke="#6f9fdc" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- arrow from qdrant into retrieve -->
+  <path d="M372,470 C410,470 420,369 454,369" fill="none" stroke="#6f9fdc" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- arrow from falkordb into retrieve (gated, optional) -->
+  <path d="M372,571 C410,571 430,392 454,392" fill="none" stroke="#5b87c4" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+
+  <!-- LangGraph synthesize column (right of pipeline inner) -->
+  <g filter="url(#cardShadow)">
+    <rect x="704" y="180" width="224" height="302" rx="11" fill="url(#agentFill)" stroke="#6fc4ac" stroke-width="1.9"/>
+  </g>
+  <g>
+    <text x="816" y="206" text-anchor="middle" class="node-t" fill="#d6ebbf">LangGraph Agent</text>
+    <text x="816" y="226" text-anchor="middle" class="pill" fill="#a6c884" style="font-size:9px; letter-spacing:0.3px;">MULTI-TENANT · CHECKPOINTED · MEMORY</text>
+
+    <rect x="724" y="244" width="184" height="42" rx="7" fill="#1a2f23" stroke="#47786757"/>
+    <text x="816" y="270" text-anchor="middle" class="node-s" fill="#d3e4f5">load_memory · plan · retrieve</text>
+
+    <rect x="724" y="296" width="184" height="42" rx="7" fill="#1a2f23" stroke="#47786757"/>
+    <text x="816" y="322" text-anchor="middle" class="node-s" fill="#d3e4f5">validate · gap_analyze ↻ ×2</text>
+
+    <rect x="724" y="348" width="184" height="42" rx="7" fill="#1a2f23" stroke="#47786757"/>
+    <text x="816" y="368" text-anchor="middle" class="node-s" fill="#d3e4f5">synthesize</text>
+    <text x="816" y="383" text-anchor="middle" class="tag">Pydantic citations enforced</text>
+
+    <rect x="724" y="400" width="184" height="42" rx="7" fill="#1a2f23" stroke="#47786757"/>
+    <text x="816" y="420" text-anchor="middle" class="node-s" fill="#d3e4f5">verify ⇄ human-gate</text>
+    <text x="816" y="435" text-anchor="middle" class="tag">checkpointed · interrupt</text>
+
+    <text x="816" y="462" text-anchor="middle" class="tag">load/save_memory · per-tenant</text>
+    <line x1="816" y1="286" x2="816" y2="294" stroke="#7fa35f" stroke-width="1.6" marker-end="url(#arrowGreen)"/>
+    <line x1="816" y1="338" x2="816" y2="346" stroke="#7fa35f" stroke-width="1.6" marker-end="url(#arrowGreen)"/>
+    <line x1="816" y1="390" x2="816" y2="398" stroke="#7fa35f" stroke-width="1.6" marker-end="url(#arrowGreen)"/>
+  </g>
+
+  <!-- arrow rerank -> langgraph -->
+  <path d="M680,451 C694,451 694,360 720,360" fill="none" stroke="#6f9fdc" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- grounded answer out -->
+  <g filter="url(#cardShadow)">
+    <rect x="436" y="536" width="516" height="76" rx="11" fill="url(#answerFill)" stroke="#6fc4ac" stroke-width="1.6"/>
+    <rect x="436" y="536" width="4" height="76" rx="2" fill="#5fae9a"/>
+    <text x="456" y="561" class="node-t">Grounded Answer + Citations</text>
+    <text x="456" y="581" class="node-s">FastAPI /ask /resume /health /health/deep · WS /ws/ask · MCP /mcp/</text>
+    <text x="456" y="600" class="tag" fill="#8fc7b6">one auth resolver: OAuth 2.1 (Cognito M2M) · JWT · API key — no unauthenticated mode</text>
+  </g>
+  <line x1="816" y1="482" x2="816" y2="530" stroke="#6f9fdc" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- ============ EVAL HARNESS LANE (right) ============ -->
+  <text x="992" y="132" class="lane" fill="#e0c28f">MEASUREMENT</text>
+  <rect x="992" y="140" width="232" height="3" rx="1.5" fill="url(#amberUnder)"/>
+
+  <g filter="url(#cardShadow)">
+    <rect x="992" y="158" width="232" height="442" rx="14" fill="url(#evalFill)" stroke="#584727" stroke-width="1.3"/>
+    <rect x="992" y="158" width="4" height="442" rx="2" fill="#cf9b5b"/>
+    <text x="1010" y="186" class="node-t" fill="#f4dcae">Eval Harness</text>
+    <text x="1010" y="205" class="tag" fill="#c19b5f">built before the agent</text>
+
+    <rect x="1010" y="222" width="196" height="74" rx="8" fill="#25241b" stroke="#584727"/>
+    <text x="1026" y="246" class="node-s" fill="#ecd9b6">Retrieval metrics · exact</text>
+    <text x="1026" y="264" class="tag">hit@k · recall · ctx-precision</text>
+    <text x="1026" y="280" class="tag">MRR · vs golden span ids</text>
+
+    <rect x="1010" y="306" width="196" height="64" rx="8" fill="#25241b" stroke="#584727"/>
+    <text x="1026" y="330" class="node-s" fill="#ecd9b6">LLM-judge metrics</text>
+    <text x="1026" y="348" class="tag">faithfulness · relevancy</text>
+    <text x="1026" y="363" class="tag">refuse-if-ungrounded</text>
+
+    <rect x="1010" y="380" width="196" height="58" rx="8" fill="#25241b" stroke="#584727"/>
+    <text x="1026" y="404" class="node-s" fill="#ecd9b6">Per-tag slices · A/B</text>
+    <text x="1026" y="422" class="tag">hard-case breakdown · ablation</text>
+
+    <rect x="1010" y="448" width="196" height="52" rx="8" fill="#25241b" stroke="#584727"/>
+    <text x="1026" y="470" class="node-s" fill="#ecd9b6">Regression gate (CI)</text>
+    <text x="1026" y="487" class="tag">fails loudly on quality drop</text>
+
+    <rect x="1010" y="510" width="196" height="74" rx="8" fill="#25241b" stroke="#584727"/>
+    <text x="1026" y="534" class="node-s" fill="#ecd9b6">Observability (optional)</text>
+    <text x="1026" y="552" class="tag">OpenTelemetry spans · Langfuse</text>
+    <text x="1026" y="568" class="tag">no-op if unconfigured</text>
+  </g>
+
+  <!-- dashed eval taps into query pipeline -->
+  <path d="M952,360 C972,360 980,300 1006,290" fill="none" stroke="#cf9b5b" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrowEval)"/>
+  <path d="M952,568 C975,568 982,480 1006,468" fill="none" stroke="#cf9b5b" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrowEval)"/>
+  <text x="958" y="345" class="tag" fill="#c19b5f">observes</text>
+
+  <!-- ============ PROVIDER ABSTRACTION SEAM (bottom) ============ -->
+  <text x="56" y="650" class="lane">PROVIDER ABSTRACTION · ONE INTERFACE, SWAPPABLE BACKENDS</text>
+  <rect x="56" y="658" width="1168" height="3" rx="1.5" fill="url(#blueUnder)"/>
+
+  <!-- protocols row -->
+  <g filter="url(#cardShadow)">
+    <rect x="56" y="676" width="180" height="78" rx="10" fill="#182a44" stroke="#3d5c8c" stroke-width="1.2"/>
+    <text x="70" y="702" class="node-t">EmbeddingProvider</text>
+    <text x="70" y="722" class="node-s">dense + sparse · space_id</text>
+    <text x="70" y="740" class="tag">hashing (CI) · Titan v2</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="254" y="676" width="180" height="78" rx="10" fill="#182a44" stroke="#3d5c8c" stroke-width="1.2"/>
+    <text x="268" y="702" class="node-t">Retriever</text>
+    <text x="268" y="722" class="node-s">in-memory · Qdrant · AOSS</text>
+    <text x="268" y="740" class="tag">per-tenant store · ADR-0029</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="451" y="676" width="180" height="78" rx="10" fill="#182a44" stroke="#3d5c8c" stroke-width="1.2"/>
+    <text x="465" y="702" class="node-t">Reranker</text>
+    <text x="465" y="722" class="node-s">proxy (CI) · cross-encoder</text>
+    <text x="465" y="740" class="tag">prod: bge-reranker-v2-m3</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="649" y="676" width="180" height="78" rx="10" fill="#182a44" stroke="#3d5c8c" stroke-width="1.2"/>
+    <text x="663" y="702" class="node-t">GraphStore</text>
+    <text x="663" y="722" class="node-s">in-memory (CI) · FalkorDB</text>
+    <text x="663" y="740" class="tag">multi-hop gated · ADR-0024</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="846" y="676" width="180" height="78" rx="10" fill="#182a44" stroke="#3d5c8c" stroke-width="1.2"/>
+    <text x="860" y="702" class="node-t">LLMJudge</text>
+    <text x="860" y="722" class="node-s">heuristic (CI) · real LLM</text>
+    <text x="860" y="740" class="tag">deterministic in CI</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="1044" y="676" width="180" height="78" rx="10" fill="#182a44" stroke="#3d5c8c" stroke-width="1.2"/>
+    <text x="1058" y="702" class="node-t">LLM Backend</text>
+    <text x="1058" y="722" class="node-s">TemplateLLM · Bedrock</text>
+    <text x="1058" y="740" class="tag">config swap, not a branch</text>
+  </g>
+
+  <!-- ============ FOOTER: build status + legend ============ -->
+  <line x1="56" y1="788" x2="1224" y2="788" stroke="#26344b" stroke-width="1"/>
+
+  <!-- legend -->
+  <rect x="56" y="808" width="18" height="14" rx="3" fill="#182a44" stroke="#4f86d6" stroke-width="1.6"/>
+  <text x="82" y="820" class="legend">corpus + retrieval + eval</text>
+
+  <rect x="261" y="808" width="18" height="14" rx="3" fill="#163026" stroke="#5fae9a" stroke-width="1.6"/>
+  <text x="287" y="820" class="legend">agent + runtime</text>
+
+  <rect x="400" y="808" width="18" height="14" rx="3" fill="#25241b" stroke="#584727"/>
+  <text x="426" y="820" class="legend">measurement / observability</text>
+
+  <line x1="625" y1="815" x2="655" y2="815" stroke="#cf9b5b" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="663" y="820" class="legend">observes pipeline</text>
+
+  <!-- hero stat badge -->
+  <g filter="url(#cardShadow)">
+    <rect x="820" y="805" width="404" height="24" rx="12" fill="#15291f" stroke="#3f6e5e" stroke-width="1.2"/>
+  </g>
+  <circle cx="838" cy="817" r="4" fill="#6fe0b0"/>
+  <text x="852" y="821" class="legend" fill="#bfe6c9" font-weight="600">577 tests passing · offline-reproducible · public-safe corpus</text>
+</svg>
