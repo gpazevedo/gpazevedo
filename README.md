@@ -90,14 +90,18 @@ DDD · CDC & event-driven architecture.
 ![Agent / Service Generator](./generator/Agent-Generator-architecture-functional.svg)
 *Generator of production-ready AWS services and AI-agent skeletons on Lambda / App Runner with full Observability and GitOps*
 
+---
+
 ![AI Teleprompter](./teleprompter/architecture.svg)
 *Browser-based AI teleprompter for public speakers*
 
+---
+
 ![Kafka Ingestor](./Kafka_Service.png)
+
 *Contract-based Avro event production from a JSON payload, using the Outbox Pattern*
 
-![Kafka DLQ on Apache Beam](./Beam_Kafka_DLQ.png)
-*Kafka Dead Letter Queue on Apache Beam*
+---
 
-![ETL Hexagonal](./CoffeeShop_Architecture.png)
-*Shop accounting — hexagonal ETL*
+![Kafka DLQ on Apache Beam](./Beam_Kafka_DLQ.png)
+*Kafka Connector Dead Letter Queue on Apache Beam*
